@@ -15,7 +15,7 @@ library(pkgverse)
 ```
 # pkgverse
 
-Create your own universe of packages a la [tidyverse](https://github.com/tidyverse/tidyverse).
+Create your own universe of packages à la [tidyverse](https://github.com/tidyverse/tidyverse).
 
 ## Installation
 
