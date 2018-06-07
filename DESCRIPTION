@@ -1,0 +1,12 @@
+Package: pkgverse
+Version: 0.0.0.9000
+Title: Make a Package Universe
+Description: Build your own universe of package manager a la tidyverse.
+Authors@R: person("Michael Wayne", "Kearney", ,
+    "kearneymw@missouri.edu", role = c("aut", "cre"),
+    comment = c(ORCID = "0000-0002-0730-4694"))
+license: MIT
+Encoding: UTF-8
+LazyData: true
+ByteCompile: true
+RoxygenNote: 6.0.1.9000
