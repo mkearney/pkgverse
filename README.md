@@ -3,7 +3,7 @@
 
 # pkgverse
 
-Create your own universe of packages a la
+Create your own universe of packages à la
 [tidyverse](https://github.com/tidyverse/tidyverse).
 
 ## Installation
