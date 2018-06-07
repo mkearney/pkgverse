@@ -11,7 +11,7 @@ Create your own universe of packages a la
 You can install the dev version of pkgverse from Github with:
 
 ``` r
-devtools::install_github("pkgverse")
+devtools::install_github("mkearney/pkgverse")
 ```
 
 ## Example
