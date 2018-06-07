@@ -15,6 +15,8 @@ rfuns <- readlines("~/R/pkgverse/sources/rfuns.R")
 docs <- list(description = description, rfuns = rfuns)
 save(docs, file = "~/R/pkgverse/R/sysdata.rda")
 
+usethis::use_git()
+usethis::use_git_ignore("sources")
 
 pkg <- "kearney"
 pkgs <- c("rtweet", "tfse", "chr", "funique")
