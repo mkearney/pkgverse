@@ -1,9 +1,5 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^make\.R$
-^data$
-^data\.*$
-^data*$
-^data/\.*$
-^data/rfuns\.R$
 ^sources\.*$
+^README\.Rmd$
