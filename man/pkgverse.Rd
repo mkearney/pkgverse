@@ -4,16 +4,35 @@
 \alias{pkgverse}
 \title{pkgverse}
 \usage{
-pkgverse(pkg, pkgs)
+pkgverse(pkg, pkgs, keep = FALSE, use = NULL)
 }
 \arguments{
 \item{pkg}{Name of your -verse (verse will be appending to whatever you enter here).}
 
 \item{pkgs}{Character vector of packages.}
+
+\item{keep}{if not \code{FALSE} then a string with the path to create the \code{pkg} dir (name should)
+\emph{not} include the \code{pkg} name but should exist. It will be \code{path.expand()}ed
+and tested for presence.}
+
+\item{use}{if not \code{NULL} then a character vector of \code{usethis} "use" functions (the bit
+after the first underscore) that make sense for a package.}
 }
 \value{
 Installs a package of desired name (with 'verse' attached to what is supplied)
 }
 \description{
 Create your own pkgverse
+}
+\examples{
+\dontrun{
+c("curl", "jsonlite", "httr", "xml2", "rvest", "purrr", "dplyr",
+  "stringi", "gdns", "urltools", "iptools", "seleniumPipes", "webdriver",
+  "HARtools", "xslt", "V8", "webreadr", "openssl", "splashr") -> tidyweb
+
+pkgverse(
+  "tidyweb", tidyweb, "~/packages",
+  use=c("readme_rmd", "rstudio", "testthat", "mit_license", "git")
+)
+}
 }
