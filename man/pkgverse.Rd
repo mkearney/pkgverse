@@ -7,13 +7,25 @@
 pkgverse(pkg, pkgs)
 }
 \arguments{
-\item{pkg}{Name of your -verse (verse will be appending to whatever you enter here).}
+\item{pkg}{Name of your set of packages. It's recommended that users append
+this name with something like 'verse' or otherwise provide some kind of
+explicit/obvious indicator that the package name is a stand in for a
+selection of packages.}
 
-\item{pkgs}{Character vector of packages.}
+\item{pkgs}{Character vector of package names.}
 }
 \value{
-Installs a package of desired name (with 'verse' attached to what is supplied)
+Installs a package of desired name, which, when loaded, will load,
+  handle, and display conflicts of the packages supplied via \code{pkgs}.
 }
 \description{
 Create your own pkgverse
+}
+\examples{
+\dontrun{
+
+## example: web scraping package universe
+pkgverse("webscraperverse", c("xml2", "rvest", "httr", "RSelenium"))
+
+}
 }
