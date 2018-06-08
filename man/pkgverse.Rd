@@ -4,7 +4,7 @@
 \alias{pkgverse}
 \title{pkgverse}
 \usage{
-pkgverse(pkg, pkgs)
+pkgverse(pkg, pkgs, keep = FALSE, use = NULL, install_if = FALSE)
 }
 \arguments{
 \item{pkg}{Name of your set of packages. It's recommended that users append
@@ -13,6 +13,18 @@ explicit/obvious indicator that the package name is a stand in for a
 selection of packages.}
 
 \item{pkgs}{Character vector of package names.}
+
+\item{keep}{If not `FALSE`, then used to indicate location to keep the
+`pkg` dir (name), which should  _not_ include the `pkg` name but should
+exist. It will be `path.expand()`ed and tested for presence.}
+
+\item{use}{If not `NULL` (the default), then a character vector of `usethis`
+"use" functions (the bit after the first underscore) that make sense for
+a package.}
+
+\item{install_if}{Logical indicating whether to install (from CRAN) any
+packages in `pkgs` that are not already installed on the system. Defaults
+to `FALSE`.}
 }
 \value{
 Installs a package of desired name, which, when loaded, will load,
@@ -24,8 +36,17 @@ Create your own pkgverse
 \examples{
 \dontrun{
 
-## example: web scraping package universe
-pkgverse("webscraperverse", c("xml2", "rvest", "httr", "RSelenium"))
+## vector of pkgs
+tidyweb <- c("curl", "jsonlite", "httr", "xml2", "rvest", "purrr", "dplyr",
+  "stringi", "gdns", "urltools", "iptools", "seleniumPipes", "webdriver",
+  "HARtools", "xslt", "V8", "webreadr", "openssl", "splashr")
+
+## create tidyweb pkgverse
+pkgverse("tidyweb", tidyweb,
+  keep = "~/packages",
+  use = c("readme_rmd", "rstudio", "testthat", "mit_license", "git")
+)
+
 
 }
 }
