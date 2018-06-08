@@ -13,9 +13,20 @@ build_description <- function(pkg) {
 #'
 #' Create your own pkgverse
 #'
-#' @param pkg Name of your -verse (verse will be appending to whatever you enter here).
-#' @param pkgs Character vector of packages.
-#' @return Installs a package of desired name (with 'verse' attached to what is supplied)
+#' @param pkg Name of your set of packages. It's recommended that users append
+#'   this name with something like 'verse' or otherwise provide some kind of
+#'   explicit/obvious indicator that the package name is a stand in for a
+#'   selection of packages.
+#' @param pkgs Character vector of package names.
+#' @return Installs a package of desired name, which, when loaded, will load,
+#'   handle, and display conflicts of the packages supplied via \code{pkgs}.
+#' @examples
+#' \dontrun{
+#'
+#' ## example: web scraping package universe
+#' pkgverse("webscraperverse", c("xml2", "rvest", "httr", "RSelenium"))
+#'
+#' }
 #' @export
 pkgverse <- function(pkg, pkgs) {
   rfuns <- build_rfuns(pkg, pkgs)
@@ -27,7 +38,10 @@ pkgverse <- function(pkg, pkgs) {
   on.exit(setwd(owd))
   ## set wd to tmp dir
   setwd(tmp)
-  ## create pkg folder
+  ## create pkg folder (remove if already exists)
+  if (dir.exists(pkg)) {
+    unlink(pkg, recursive = TRUE)
+  }
   dir.create(pkg)
   ## cd pkg dir
   setwd(pkg)
@@ -45,4 +59,6 @@ pkgverse <- function(pkg, pkgs) {
   devtools::document()
   ## install package
   devtools::install()
+  ## remove temp pkg source files
+  unlink(".", recursive = TRUE)
 }
