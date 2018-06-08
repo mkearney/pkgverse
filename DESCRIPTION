@@ -11,4 +11,5 @@ LazyData: true
 ByteCompile: true
 RoxygenNote: 6.0.1.9000
 Imports: 
-    devtools
+    devtools,
+    usethis
