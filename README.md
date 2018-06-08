@@ -20,10 +20,10 @@ Create a **webscraperverse**
 
 ``` r
 ## name of pkg-verse
-pkg <- "webscraper"
+pkg <- "webscraperverse"
 
 ## packages to include
-pkgs <- c("xml2", "rvest", "httr", "RSelenium")
+pkgs <- c("xml2", "rvest", "httr", "jsonlite")
 
 ## build webscraperverse
 pkgverse(pkg, pkgs)
@@ -34,7 +34,7 @@ Now load your pkg universe:
 ``` r
 ## load webscraperverse
 library(webscraperverse)
-> ── Attaching packages ───────────────────────────────────────── webscraperverse 0.0.1 ──
-> ✔ xml2      1.2.0     ✔ httr      1.3.1
-> ✔ rvest     0.3.2     ✔ RSelenium 1.7.1
+── Attaching packages ────────────────────────────────────────────────── webscraperverse 0.0.1 ──
+✔ xml2     1.2.0     ✔ httr     1.3.1
+✔ rvest    0.3.2     ✔ jsonlite 1.5  
 ```
