@@ -3,3 +3,4 @@
 ^make\.R$
 ^sources\.*$
 ^README\.Rmd$
+^logo\.R$

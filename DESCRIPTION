@@ -1,5 +1,5 @@
 Package: pkgverse
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Title: Make a Package Universe
 Description: Build your own universe of package manager a la tidyverse.
 Authors@R: person("Michael Wayne", "Kearney", ,

@@ -1,7 +1,9 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# pkgverse
+# pkgverse <img src="man/figures/logo.png" width="160px" align="right" />
+
+[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 
 Create your own universe of packages à la
 [tidyverse](https://github.com/tidyverse/tidyverse).
