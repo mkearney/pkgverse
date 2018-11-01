@@ -1,7 +1,12 @@
 Package: pkgverse
-Version: 0.0.0.9001
-Title: Make a Package Universe
-Description: Build your own universe of package manager a la tidyverse.
+Version: 0.0.1
+Title: Build a Meta-Package Universe
+Description: Build your own universe of packages similar to the 'tidyverse'
+    package with this meta-package creator. Create a package-verse, or meta
+    package, by supplying a custom name for the collection of packages and the
+    vector of desired package names to include–and optionally supply a
+    destination directory, an indicator of whether to keep the created package
+    directory, and/or a vector of verbs implement via the 'usethis' package.
 Authors@R: person("Michael Wayne", "Kearney", ,
     "kearneymw@missouri.edu", role = c("aut", "cre"),
     comment = c(ORCID = "0000-0002-0730-4694"))
@@ -12,4 +17,6 @@ ByteCompile: true
 RoxygenNote: 6.1.0.9000
 Imports: 
     devtools,
-    usethis
+    usethis,
+    utils
+License: CC0

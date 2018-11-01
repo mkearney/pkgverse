@@ -18,7 +18,7 @@ install_if <- function(pkg) {
 install_if_ <- function(x) {
   i <- !requireNamespace(x, quietly = TRUE)
   if (i) {
-    install.packages(x, quiet = TRUE)
+    utils::install.packages(x, quiet = TRUE)
   }
   i
 }
