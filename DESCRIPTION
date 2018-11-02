@@ -11,7 +11,6 @@ Description: Build your own universe of packages similar to the 'tidyverse'
 Authors@R: person("Michael Wayne", "Kearney", ,
     "kearneymw@missouri.edu", role = c("aut", "cre"),
     comment = c(ORCID = "0000-0002-0730-4694"))
-license: MIT
 Encoding: UTF-8
 LazyData: true
 ByteCompile: true
@@ -21,3 +20,5 @@ Imports:
     usethis,
     utils
 License: CC0
+URL: https://pkgverse.mikewk.com
+BugReports: https://github.com/mkearney/pkgverse/issues
