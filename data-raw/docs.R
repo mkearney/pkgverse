@@ -201,7 +201,8 @@ docs <- list(
     "  invisible()",
     "}",
     "",
-    "#' List all {PKG} dependencies", "#'",
+    "#' List all {PKG} dependencies",
+    "#'",
     "#' @param recursive If \\code{TRUE}, will also list all dependencies of",
     "#'   {PKG} packages.",
     "#' @export",
@@ -304,3 +305,5 @@ docs <- list(
     "}"
   )
 )
+
+usethis::use_data(docs, internal = TRUE, overwrite = TRUE)
