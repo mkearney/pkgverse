@@ -1,7 +1,7 @@
 docs <- list(description = c(
   "Package: {PKG}", "Title: Easily Install and Load Select Packages",
   "Version: 0.0.1", "Authors@R: c(", "    person(\"Michael Wayne\", \"Kearney\", , email = \"mike.wayne.kearney@gmail.com\", role = c(\"aut\", \"cre\"))",
-  "  )", "Description: The '{PKG}verse' is selection of packages designed to be loaded",
+  "  )", "Description: The '{PKG}verse' is a selection of packages designed to be loaded",
   "    in concert. The purpose of this package is to make it easy to install and ",
   "    subsequently load those packages.", "Depends: ", "    R (>= 3.1)",
   "Imports: ", "    cli (>= 1.0.0),", "    crayon (>= 1.3.4),",
