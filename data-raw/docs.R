@@ -6,7 +6,7 @@ docs <- list(description = c(
   "    subsequently load those packages.", "Depends: ", "    R (>= 3.1)",
   "Imports: ", "    cli (>= 1.0.0),", "    crayon (>= 1.3.4),",
   "    dplyr (>= 0.7.4),", "    purrr (>= 0.2.4),", "    rstudioapi (>= 0.7),",
-  "    tibble (>= 1.4.2)", "Encoding: UTF-8", "LazyData: true",
+  "    tibble (>= 1.4.2),", "    utils", "Encoding: UTF-8", "LazyData: true",
   "RoxygenNote: 6.0.1.9000"
 ), rfuns = c(
   "core <- c(\"{PKGS}\")",
